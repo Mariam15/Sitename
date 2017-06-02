@@ -1,0 +1,536 @@
+
+*{
+    margin: 0; /*Отменяем отступы и поля, что б было одинаковое отображение в разных браузерах*/
+    padding: 0; /*Отменяем отступы и поля, что б было одинаковое отображение в разных браузерах*/
+}
+html,body{
+    height:100%;
+}
+body,h1,h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    border:none;
+}
+
+#home-page{
+    max-width: 1450px;
+    width:100%;
+    min-height: 100%;
+    margin: 0 auto;
+}
+#main{
+    min-height: 100%;
+    margin:0 0 -200px;
+    background: #f5f5f5;
+}
+#all{
+    overflow:hidden; /* Отменяем горизонтальную прокрутку */
+    padding:0 0 220px;
+}
+
+
+/* HEADER BEGIN ------------------------------------*/
+
+.header{
+    height: 100%;
+    min-height: 181px;
+    background: white;
+    position:relative;
+}
+
+.header_logo-header-widget{
+    padding: 30px 157px 28px 159px;
+}
+.logo{
+    display:inline-block;
+    margin: -15px 0 0 -2px;
+    width: 335px;
+    height: 47px;
+}
+.logo a {
+    font-size: 48px;
+    color: #eb3b00;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.logo a span {
+    font-size: 18px;
+    font-family: "PT Serif", serif;
+    color: #272727;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin: 0 0 0 -3px;
+    opacity: 0.5;
+}
+
+.header-widget{
+    display:inline-block;
+    list-style:none;
+    float:right;
+    margin: 10px 2px 0 0;
+}
+.fa-key {
+    font-size: 14px;
+    font-family: "FontAwesome";
+    color: rgb( 238, 68, 0 );
+    margin: 0 9px 0 0;
+}
+.header-widget a.contact {
+    background: #ee4400;
+    color: #fff;
+    text-transform: uppercase;
+    font:italic 13px/1.5 'PT Serif',serif;
+    padding: 13px 56px 14px;
+    margin: 0 0 0 7px;
+    white-space: pre;
+}
+.header-widget a.contact :hover{
+    background: #282828;
+}
+.header-widget a.login {
+    padding:14px 23px;
+    font:italic 13px/1.5 'PT Serif',serif;
+    color: #282828;
+    text-transform: uppercase;
+}
+.header-widget a.login:hover{
+    background: #f5f5f5;
+}
+.header-content{
+    background: #282828;
+    height: 100%;
+    max-height: 72px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.nav-menu ul{
+    list-style: none; /* Отменяем маркер для списка */
+    margin-left: 158px;
+}
+.nav-menu ul li {
+    float: left;
+    display:inline-block;
+    padding: 1px 16px;
+    line-height: 3.9;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+}
+.nav-menu ul li.active{
+    background: #eb3c00;
+}
+.nav-menu li a{
+    color: white;
+}
+
+#search{
+    float:right;
+    margin: 16px 159px 16px 0;
+    width: 18.55%;
+}
+.form-search{
+    position: relative;
+}
+#search form input[name="q"]{
+    padding:9px 0 9px  12px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size:15px;
+    font-family: 'Oswald', sans-serif;
+    border:none;  /* Отключаем границы */
+    outline: none; /*Отменяет стиль внешней границы*/
+    /* чтобы ширина поля ввода (100%) включала в себя внутренние отступы */
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+#search form input[name="q"]::-webkit-search-cancel-button {
+    display: none; /* убрали кнопку очистки */
+}
+#search button{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+}
+#search button .fa-search {
+    font-size: 18px;
+    content: '\f002'; /* добавляем иконку лупы */
+    font-family: FontAwesome;
+    color: rgb( 45, 51, 64 );
+    opacity: 0.5;
+}
+/* HEADER END*/
+
+
+/*CONTENT BEGIN --------------------------------------*/
+
+.content {
+    width: 79.5%;
+    margin: 0 auto;
+    padding: 0 0 0 18px;
+}
+.content h1{
+    font-size: 51px;
+    max-width: 750px;
+    width:100%;
+    margin-top: 49px;
+    line-height: 60px;
+    word-spacing: -1.5px;
+}
+.content>p{
+    font-family: 'PT Serif', serif;
+    font-size:24px;
+    line-height: 36px;
+    max-width: 830px;
+    width:100%;
+    margin-top: 41px;
+}
+
+.key{
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+}
+.key h4{
+    padding: 33px 0 12px 0;
+    font-weight: bold;
+}
+.key ul{
+    list-style-position: outside;
+    margin-left: 1.8%;
+    line-height: 27px;
+}
+
+
+#news:after, #news:before{  /* Учтем дочерние элементы с float */
+    display:table;
+    content:''; /* Отображение блока */
+}
+#news:after{
+    clear:both;
+}
+
+
+#news-header{
+    color: #eb3c00;
+    margin: 57px 0 20px -1px;
+    font-size:15px;
+    text-transform: uppercase;
+}
+.news-img{
+    height: 190px;
+    float:left;
+    margin: 0 19px 0 1px;
+    position:relative;
+}
+.news-img img {
+    width: 100%;
+}
+.news-img span{
+    width: 163px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.12;
+    position: absolute;
+    top:122px;
+    right:9px;
+    overflow:hidden;
+}
+
+/* CONTENT: file register.html begin --------*/
+.container {
+    font-family: 'PT Serif',serif;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+    font-family: 'PT Serif',serif;
+    -moz-box-sizing: border-box; /* для FF */
+    box-sizing: border-box; /* чтобы размеры поля были во всех браузерах одинаковыми (по умолчанию вебкиты, с крестиком для очистки, иначе рассчитывают размер, чем остальные браузеры) */
+    /*text-rendering: optimizeLegibility;*/
+}
+#contact {
+    background: #F9F9F9;
+    padding: 20px;
+    margin: 50px 0 0 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#contact h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+}
+fieldset {
+    border: medium none;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+    overflow: auto;
+}
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#contact button[type="submit"]:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.greeting{
+     color: #8e9385;;
+}
+.greeting a{
+     color: #4CAF50;
+}
+#contact input:focus,
+#contact textarea:focus {
+    outline:0;
+    border: 1px solid #aaa;
+}
+::-webkit-input-placeholder { /* изменили цвет подсказки в вебкитах */
+    color: #888;
+}
+:-moz-placeholder { /* изменили цвет подсказки в FF 18- */
+    color: #888;
+}
+::-moz-placeholder { /* изменили цвет подсказки в FF 19+ */
+    color: #888;
+}
+:-ms-input-placeholder { /* изменили цвет подсказки в IE */
+    color: #888;
+}
+/* file register.html end */
+
+
+/* CONTENT: file login.html begin --------------*/
+.login-page {
+    max-width: 360px;
+    width: 100%;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.form {
+    font-family: 'PT Serif',serif;
+    position: relative;
+    z-index: 1;
+    background: #F9F9F9;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.form h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+}
+.form input {
+    outline: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #43A047;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #8e9385;
+    font-size: 16px;
+}
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.form .register-form {
+    display: none;
+}
+/* file login.html end */
+/* CONTENT END */
+
+
+/*FOOTER BEGIN -----------------------------------------------*/
+
+footer{
+    height: 200px;
+    background:#f5f5f5;
+}
+footer .icon{
+    float: right;
+    margin: 105px 27px 0 0;
+}
+/*FOOTER END */
+
+/* MEDIA QUERIES ----------------------------------------------*/
+
+@media screen and (max-width: 960px) {
+    .header_logo-header-widget {
+        padding: 30px 34px 28px;
+    }
+    .nav-menu ul {
+        margin-left: 58px;
+    }
+    #search {
+        margin: 16px 34px 16px 0;
+    }
+    .content{
+        padding:0;
+    }
+}
+
+@media (max-width:720px){
+    .header {
+        height: 225px;
+    }
+    .header-widget {
+        float: none;
+        margin-top:18px;
+    }
+    .header_logo-header-widget {
+        text-align: center;
+    }
+}
+
+@media (max-width: 670px) {
+    .header {
+        height: 300px;
+    }
+    .header-content {
+        text-align: center;
+        max-height: 145px;
+    }
+    .nav-menu{
+        display: inline-block;
+    }
+    .nav-menu ul{
+        margin: auto;
+    }
+    #search {
+        margin: 10px 20% 10px;
+        float:none;
+        width: 60%;
+    }
+}
+
+@media (max-width: 450px) {
+    .header {
+        height: 275px;
+    }
+    .header-content {
+        max-height: 125px;
+    }
+    .nav-menu ul li {
+        padding: 0 11px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .header {
+        height: 260px;
+    }
+    .header_logo-header-widget {
+        padding: 20px 0;
+    }
+    .header-widget a.contact {
+        margin: 0;
+    }
+    .logo a img {
+        height: 40px;
+    }
+    .header-content {
+        max-height: 125px;
+    }
+    .nav-menu li a {
+        font-size:13px;
+    }
+}
+
+
